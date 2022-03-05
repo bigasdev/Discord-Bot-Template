@@ -2,7 +2,7 @@ using System;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace ssdiscordbot
+namespace discordbottemplate
 {
     public struct ConfigJson{
         [JsonProperty("token")]
