@@ -5,7 +5,7 @@ using System.IO;
 using Discord.WebSocket;
 using Discord;
 using Newtonsoft.Json;
-
+using discordbottemplate.utilities;
 namespace discordbottemplate
 {
     public class Bot
@@ -22,15 +22,10 @@ namespace discordbottemplate
             Client.Log += Log;
 
 
-            var json = string.Empty;
+            var configJson = BJson.Instance.ConstructJson<ConfigJson>("res/config.json").Result;
+            var genericJson = BJson.Instance.ConstructJson<GenericJson>("res/generic.json").Result;
 
-            using(var fs = File.OpenRead("config.json")){
-                using(var sr = new StreamReader(fs)){
-                    json = await sr.ReadToEndAsync().ConfigureAwait(false);
-                }
-            }
-
-            var configJson = JsonConvert.DeserializeObject<ConfigJson>(json);
+            Console.WriteLine(genericJson.Name);
 
             //Setting the commands
             var c =  new Commands();
