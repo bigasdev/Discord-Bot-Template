@@ -4601,11 +4601,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\gusta\\.code\\discordbottemplate\\discordbot.csproj",
+      "projectUniqueName": "C:\\Users\\gusta\\.code\\discordbottemplate\\discordbot.csproj",
       "projectName": "discordbot",
-      "projectPath": "c:\\Users\\gusta\\.code\\discordbottemplate\\discordbot.csproj",
+      "projectPath": "C:\\Users\\gusta\\.code\\discordbottemplate\\discordbot.csproj",
       "packagesPath": "C:\\Users\\gusta\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\gusta\\.code\\discordbottemplate\\obj\\",
+      "outputPath": "C:\\Users\\gusta\\.code\\discordbottemplate\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gusta\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -4664,7 +4664,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }

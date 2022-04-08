@@ -12,16 +12,12 @@ namespace discordbottemplate
     {   
         public static DiscordSocketClient InstanceClient;
         public DiscordSocketClient Client{get;private set;}
-        private UsersManager usersManager;
-        public static UsersManager usersManagerInstance;
         private string commandsPrefix;
         public async Task RunAsync(){
 
             Client = new DiscordSocketClient();
 
             //Creating our usermanager
-            usersManager = new UsersManager();
-            usersManagerInstance = usersManager;
 
             Client.Log += Log;
 
@@ -39,14 +35,10 @@ namespace discordbottemplate
             //Setting the commands
             var c =  new Commands();
             Client.MessageReceived += c.CommandHandler;
-            Client.ButtonExecuted += c.ButtonHandler;
             
             //Setting it to debug mode 
             if(configJson.DebugMode){
                 Console.WriteLine("Starting the debug stuff");
-                var dc = new DebugCommands();
-                Client.MessageReceived += dc.CommandHandler;
-                Client.ButtonExecuted += dc.DebugButtonHandler;
             }
 
             //Settings our prefix to a private variable
